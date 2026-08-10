@@ -1,10 +1,11 @@
 # webtech-lab-01 — Javiera Ignacia Carrasco Bastías
 
-Página personal construida con HTML y CSS, para el primer laboratorio del curso
-**Sitio publicado:** https://javinaxxa.github.io/webtech-lab-01/
+Personal page built with hand-written HTML and CSS, for Lab 1 (Class 1: HTML, CSS and the DOM).
 
-## Contenido
+**Published site:** https://javinaxxa.github.io/webtech-lab-01/
 
-- `index.html` — la página.
-- `styles.css` — la hoja de estilos externa.
-- `chiquitin-milo.jpg` — imagen usada en la sección "Sobre mí".
+## Contents
+
+- `index.html` — the page.
+- `styles.css` — the external stylesheet.
+- `chiquitin-milo.jpg` — image used in the "About me" section.
