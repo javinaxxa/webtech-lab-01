@@ -9,8 +9,8 @@
   --color-navy:    #16233A;
   --color-navy-2:  #202F4B;
   --color-cream:   #F4F1E9;
-  --color-amber:   #8C4A0A;
-  --color-amber-bg:#F3E3C8;
+  --color-pink:   #A91D54;
+  --color-pink-bg:#F7DCE6;
   --color-teal:    #14685C;
   --color-teal-bg: #DCEEEA;
   --color-line:    #DAD5C8;
@@ -48,7 +48,7 @@ h1, h2, h3 {
 }
 
 a {
-  color: var(--color-amber);
+  color: var(--color-pink);
   text-decoration-thickness: 1.5px;
   text-underline-offset: 3px;
 }
@@ -91,7 +91,7 @@ a:hover { color: var(--color-teal); }
   font-family: var(--font-mono);
   letter-spacing: 0.12em;
   margin: 0;
-  color: var(--color-amber-bg);
+  color: var(--color-pink-bg);
 }
 
 .header-inner nav ul {
@@ -113,8 +113,8 @@ a:hover { color: var(--color-teal); }
 }
 .header-inner nav a:hover,
 .header-inner nav a:focus-visible {
-  color: var(--color-amber-bg);
-  border-bottom-color: var(--color-amber-bg);
+  color: var(--color-pink-bg);
+  border-bottom-color: var(--color-pink-bg);
 }
 
 .hero {
@@ -128,7 +128,7 @@ a:hover { color: var(--color-teal); }
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-amber-bg);
+  color: var(--color-pink-bg);
   margin: 0 0 1rem;
 }
 
@@ -254,8 +254,8 @@ tbody tr:hover { background: var(--color-cream); }
   font-size: 0.8rem;
 }
 .pipeline-step {
-  background: var(--color-amber-bg);
-  color: var(--color-amber);
+  background: var(--color-pink-bg);
+  color: var(--color-pink);
   border-radius: 999px;
   padding: 0.35rem 0.75rem;
   white-space: nowrap;
@@ -341,7 +341,7 @@ button[type="submit"]:hover { background: var(--color-navy-2); }
   font-size: 0.82rem;
 }
 .footer-inner p { margin: 0; }
-.footer-inner a { color: var(--color-amber-bg); }
+.footer-inner a { color: var(--color-pink-bg); }
 
 /* ---------------------------------------------------------
    Responsive tweaks
