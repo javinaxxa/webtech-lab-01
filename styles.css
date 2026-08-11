@@ -225,7 +225,7 @@ thead th {
 tbody th { font-weight: 600; }
 tbody tr:hover { background: var(--color-cream); }
 
-/* Projects — Grid, the 2D shape */
+/* Projects â€” Grid, the 2D shape */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -243,7 +243,7 @@ tbody tr:hover { background: var(--color-cream); }
 .projects-grid h3 { font-size: 1.15rem; }
 .projects-grid p { max-width: none; font-size: 0.95rem; }
 
-/* Pipeline — Flexbox, the 1D shape */
+/* Pipeline â€” Flexbox, the 1D shape */
 .pipeline {
   display: flex;
   flex-wrap: wrap;
@@ -323,7 +323,7 @@ button[type="submit"] {
 button[type="submit"]:hover { background: var(--color-navy-2); }
 
 /* ---------------------------------------------------------
-   Footer — Flexbox row
+   Footer â€” Flexbox row
 --------------------------------------------------------- */
 .site-footer {
   background: var(--color-navy);
