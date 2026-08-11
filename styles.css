@@ -23,9 +23,6 @@
   --gap: clamp(1rem, 2vw, 1.75rem);
 }
 
-/* ---------------------------------------------------------
-   Reset / base
---------------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; }
 
 html { -webkit-text-size-adjust: 100%; }
