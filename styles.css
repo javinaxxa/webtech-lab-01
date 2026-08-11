@@ -6,8 +6,8 @@
   --color-surface: #FFFFFF;
   --color-ink:     #1B211E;
   --color-muted:   #52584F;
-  --color-navy:    #16233A;
-  --color-navy-2:  #202F4B;
+  --color-plum:    #5A1030;
+  --color-plum-2:  #7A1943;
   --color-cream:   #F4F1E9;
   --color-pink:   #A91D54;
   --color-pink-bg:#F7DCE6;
@@ -73,7 +73,7 @@ a:hover { color: var(--color-teal); }
 /* ---------------------------------------------------------
    Header + hero
 --------------------------------------------------------- */
-.site-header { background: var(--color-navy); color: var(--color-cream); }
+.site-header { background: var(--color-plum); color: var(--color-cream); }
 
 .header-inner {
   display: flex;
@@ -220,7 +220,7 @@ thead th {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-muted);
-  border-bottom: 2px solid var(--color-navy);
+  border-bottom: 2px solid var(--color-plum);
 }
 tbody th { font-weight: 600; }
 tbody tr:hover { background: var(--color-cream); }
@@ -313,20 +313,20 @@ button[type="submit"] {
   align-self: flex-start;
   font-family: var(--font-mono);
   font-size: 0.9rem;
-  background: var(--color-navy);
+  background: var(--color-plum);
   color: var(--color-cream);
   border: none;
   border-radius: var(--radius);
   padding: 0.7rem 1.5rem;
   cursor: pointer;
 }
-button[type="submit"]:hover { background: var(--color-navy-2); }
+button[type="submit"]:hover { background: var(--color-plum-2); }
 
 /* ---------------------------------------------------------
    Footer â€” Flexbox row
 --------------------------------------------------------- */
 .site-footer {
-  background: var(--color-navy);
+  background: var(--color-plum);
   color: var(--color-cream);
   margin-top: 2rem;
 }
