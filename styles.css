@@ -6,8 +6,8 @@
   --color-surface: #FFFFFF;
   --color-ink:     #1B211E;
   --color-muted:   #52584F;
-  --color-navy:    #16233A;
-  --color-navy-2:  #202F4B;
+  --color-plum:    #5A1030;
+  --color-plum-2:  #7A1943;
   --color-cream:   #F4F1E9;
   --color-pink:   #A91D54;
   --color-pink-bg:#F7DCE6;
@@ -15,14 +15,17 @@
   --color-teal-bg: #DCEEEA;
   --color-line:    #DAD5C8;
 
-  --font-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
-  --font-body:    "Source Serif 4", Georgia, serif;
-  --font-mono:    "IBM Plex Mono", "Courier New", monospace;
+  --font-display: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-body:    Georgia, "Times New Roman", Times, serif;
+  --font-mono:    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 
   --radius: 6px;
   --gap: clamp(1rem, 2vw, 1.75rem);
 }
 
+/* ---------------------------------------------------------
+   Reset / base
+--------------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; }
 
 html { -webkit-text-size-adjust: 100%; }
@@ -70,7 +73,7 @@ a:hover { color: var(--color-teal); }
 /* ---------------------------------------------------------
    Header + hero
 --------------------------------------------------------- */
-.site-header { background: var(--color-navy); color: var(--color-cream); }
+.site-header { background: var(--color-plum); color: var(--color-cream); }
 
 .header-inner {
   display: flex;
@@ -113,6 +116,19 @@ a:hover { color: var(--color-teal); }
   color: var(--color-pink-bg);
   border-bottom-color: var(--color-pink-bg);
 }
+
+.theme-toggle {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  background: transparent;
+  color: var(--color-cream);
+  border: 1px solid rgba(244,241,233,0.35);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+.theme-toggle:hover { border-color: var(--color-pink-bg); }
 
 .hero {
   max-width: 68rem;
@@ -217,7 +233,7 @@ thead th {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-muted);
-  border-bottom: 2px solid var(--color-navy);
+  border-bottom: 2px solid var(--color-plum);
 }
 tbody th { font-weight: 600; }
 tbody tr:hover { background: var(--color-cream); }
@@ -310,20 +326,153 @@ button[type="submit"] {
   align-self: flex-start;
   font-family: var(--font-mono);
   font-size: 0.9rem;
-  background: var(--color-navy);
+  background: var(--color-plum);
   color: var(--color-cream);
   border: none;
   border-radius: var(--radius);
   padding: 0.7rem 1.5rem;
   cursor: pointer;
 }
-button[type="submit"]:hover { background: var(--color-navy-2); }
+button[type="submit"]:hover { background: var(--color-plum-2); }
+
+/* ---------------------------------------------------------
+   Reading list — Flexbox controls, Flexbox list, Flexbox items
+--------------------------------------------------------- */
+.library-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+.library-controls .field { max-width: 20rem; }
+.library-controls input {
+  padding: 0.55rem 0.75rem;
+}
+
+.genre-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.genre-btn {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  background: var(--color-surface);
+  color: var(--color-muted);
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+}
+.genre-btn[aria-pressed="true"] {
+  background: var(--color-pink);
+  color: var(--color-cream);
+  border-color: var(--color-pink);
+}
+
+.empty-message {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-top: 1.5rem;
+}
+
+.library-list {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 40rem;
+}
+.book-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+}
+.book-item.is-read { opacity: 0.6; }
+.book-item.is-read .book-title { text-decoration: line-through; }
+
+.book-info { flex: 1; min-width: 0; }
+.book-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+.book-meta {
+  margin: 0.2rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  text-transform: capitalize;
+}
+
+.book-toggle, .book-remove {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  background: transparent;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  color: var(--color-ink);
+  flex-shrink: 0;
+}
+.book-toggle[aria-pressed="true"] {
+  background: var(--color-teal-bg);
+  color: var(--color-teal);
+  border-color: var(--color-teal);
+}
+.book-remove:hover { border-color: var(--color-pink); color: var(--color-pink); }
+
+/* ---------------------------------------------------------
+   Form errors and confirmation
+--------------------------------------------------------- */
+.field-error {
+  display: block;
+  min-height: 1.1em;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #A91D54;
+}
+
+.confirmation-message {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  background: var(--color-teal-bg);
+  color: var(--color-teal);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  margin: 0;
+}
+
+/* ---------------------------------------------------------
+   Dark theme
+--------------------------------------------------------- */
+html.theme-dark {
+  --color-bg:      #221019;
+  --color-surface: #2E1620;
+  --color-ink:     #F4E9EE;
+  --color-muted:   #C9AAB8;
+  --color-line:    #4A2432;
+}
+html.theme-dark a { color: #F2A6C4; }
+html.theme-dark a:hover { color: #6FD9C9; }
+html.theme-dark :focus-visible { outline-color: #6FD9C9; }
+html.theme-dark tbody tr:hover { background: var(--color-surface); }
+
 
 /* ---------------------------------------------------------
    Footer — Flexbox row
 --------------------------------------------------------- */
 .site-footer {
-  background: var(--color-navy);
+  background: var(--color-plum);
   color: var(--color-cream);
   margin-top: 2rem;
 }

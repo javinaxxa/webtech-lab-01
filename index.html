@@ -4,9 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Javiera Carrasco — Industrial Engineering</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,10 +15,14 @@
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#reading-list">Reading list</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">
+        🌙 Dark mode
+      </button>
     </div>
 
     <div class="hero">
@@ -80,6 +81,48 @@
       </table>
     </section>
 
+    <section id="reading-list" aria-labelledby="reading-list-title">
+      <h2 id="reading-list-title">Reading list</h2>
+      <p>The romance and fantasy books I'm currently reading or want to read next.</p>
+
+      <div class="library-controls">
+        <div class="field">
+          <label for="book-search">Search by title or author</label>
+          <input type="text" id="book-search" placeholder="e.g. Fourth Wing">
+        </div>
+        <div class="genre-filters" role="group" aria-label="Filter by genre">
+          <button type="button" class="genre-btn" data-genre="all" aria-pressed="true">All</button>
+          <button type="button" class="genre-btn" data-genre="fantasy" aria-pressed="false">Fantasy</button>
+          <button type="button" class="genre-btn" data-genre="romance" aria-pressed="false">Romance</button>
+        </div>
+      </div>
+
+      <p id="library-empty" class="empty-message" hidden>No books match your search.</p>
+      <ul id="library-list" class="library-list"></ul>
+
+      <h3>Add a book</h3>
+      <form id="add-book-form" novalidate>
+        <div class="field">
+          <label for="book-title">Title</label>
+          <input type="text" id="book-title" name="book-title">
+          <span class="field-error" id="book-title-error"></span>
+        </div>
+        <div class="field">
+          <label for="book-author">Author</label>
+          <input type="text" id="book-author" name="book-author">
+          <span class="field-error" id="book-author-error"></span>
+        </div>
+        <div class="field">
+          <label for="book-genre">Genre</label>
+          <select id="book-genre" name="book-genre">
+            <option value="fantasy">Fantasy</option>
+            <option value="romance">Romance</option>
+          </select>
+        </div>
+        <button type="submit">Add book</button>
+      </form>
+    </section>
+
     <section id="projects" aria-labelledby="projects-title">
       <h2 id="projects-title">Projects and achievements</h2>
 
@@ -123,24 +166,26 @@
 
       <address>
         <a href="mailto:jicarrasco3@miuandes.cl">jicarrasco3@miuandes.cl</a><br>
-        <a href="tel:+56965063233">+56 9 6506 3233</a><br>
-        La Florida, Santiago Metropolitan Region
       </address>
 
-      <form>
+      <form id="contact-form" novalidate>
         <div class="field">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" autocomplete="name" required>
+          <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-error">
+          <span class="field-error" id="name-error"></span>
         </div>
         <div class="field">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" autocomplete="email" required>
+          <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error">
+          <span class="field-error" id="email-error"></span>
         </div>
         <div class="field">
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea id="message" name="message" rows="5" aria-describedby="message-error"></textarea>
+          <span class="field-error" id="message-error"></span>
         </div>
         <button type="submit">Send message</button>
+        <p id="contact-confirmation" class="confirmation-message" role="status" hidden></p>
       </form>
     </section>
 
@@ -153,6 +198,8 @@
       <p>&copy; 2026 Javiera Carrasco Bastías</p>
     </div>
   </footer>
+
+  <script src="app.js"></script>
 
 </body>
 </html>
