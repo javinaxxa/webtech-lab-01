@@ -3,9 +3,10 @@ const books = [
   { id: 1, title: "Fourth Wing", author: "Rebecca Yarros", genre: "fantasy" },
   { id: 2, title: "A Court of Thorns and Roses", author: "Sarah J. Maas", genre: "fantasy" },
   { id: 3, title: "Caraval", author: "Stephanie Garber", genre: "fantasy" },
-  { id: 4, title: "It End With Us", author: "Colleen Hoover", genre: "romance" },
-  { id: 5, title: "Twilight", author: "Stephanie Meyer", genre: "romance" },
-  { id: 6, title: "Everything, Everything", author: "Nicola Yoon", genre: "romance" },
+  { id: 4, title: "Once Upon a Broken Heart", author: "Stephanie Garber", genre:"fantasy"},
+  { id: 5, title: "It End With Us", author: "Colleen Hoover", genre: "romance" },
+  { id: 6, title: "Twilight", author: "Stephanie Meyer", genre: "romance" },
+  { id: 7, title: "Everything, Everything", author: "Nicola Yoon", genre: "romance" },
 ];
 
 let nextBookId = books.length + 1;
