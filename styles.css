@@ -65,9 +65,6 @@ a:hover { color: var(--color-teal); }
   border: 0;
 }
 
-/* ---------------------------------------------------------
-   Header + hero
---------------------------------------------------------- */
 .site-header { background: var(--color-plum); color: var(--color-cream); }
 
 .header-inner {
@@ -323,9 +320,6 @@ button[type="submit"] {
 }
 button[type="submit"]:hover { background: var(--color-plum-2); }
 
-/* ---------------------------------------------------------
-   Reading list — Flexbox controls, Flexbox list, Flexbox items
---------------------------------------------------------- */
 .library-controls {
   display: flex;
   flex-wrap: wrap;
@@ -419,9 +413,7 @@ button[type="submit"]:hover { background: var(--color-plum-2); }
 }
 .book-remove:hover { border-color: var(--color-pink); color: var(--color-pink); }
 
-/* ---------------------------------------------------------
-   Form errors and confirmation
---------------------------------------------------------- */
+
 .field-error {
   display: block;
   min-height: 1.1em;
@@ -440,9 +432,7 @@ button[type="submit"]:hover { background: var(--color-plum-2); }
   margin: 0;
 }
 
-/* ---------------------------------------------------------
-   Dark theme
---------------------------------------------------------- */
+
 html.theme-dark {
   --color-bg:      #221019;
   --color-surface: #2E1620;
