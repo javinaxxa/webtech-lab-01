@@ -2,10 +2,10 @@
 const books = [
   { id: 1, title: "Fourth Wing", author: "Rebecca Yarros", genre: "fantasy" },
   { id: 2, title: "A Court of Thorns and Roses", author: "Sarah J. Maas", genre: "fantasy" },
-  { id: 3, title: "The Name of the Wind", author: "Patrick Rothfuss", genre: "fantasy" },
-  { id: 4, title: "The Hating Game", author: "Sally Thorne", genre: "romance" },
-  { id: 5, title: "People We Meet on Vacation", author: "Emily Henry", genre: "romance" },
-  { id: 6, title: "Beach Read", author: "Emily Henry", genre: "romance" },
+  { id: 3, title: "Caraval", author: "Stephanie Garber", genre: "fantasy" },
+  { id: 4, title: "It End With Us", author: "Colleen Hoover", genre: "romance" },
+  { id: 5, title: "Twilight", author: "Stephanie Meyer", genre: "romance" },
+  { id: 6, title: "Everything, Everything", author: "Nicola Yoon", genre: "romance" },
 ];
 
 let nextBookId = books.length + 1;
@@ -173,7 +173,7 @@ function validateContactForm() {
     setError("email", "Please enter your email address.");
     isValid = false;
   } else if (!emailPattern.test(email)) {
-    setError("email", "That doesn't look like a valid email address.");
+    setError("email", "Enter a valid email address.");
     isValid = false;
   } else {
     setError("email", "");
@@ -198,13 +198,12 @@ contactForm.addEventListener("submit", (event) => {
 
   if (!validateContactForm()) return;
 
-  confirmation.textContent = "Thanks! Your message has been noted — there's no server behind this form yet, but it's ready for one.";
+  confirmation.textContent = " Your message has been noted.";
   confirmation.hidden = false;
   contactForm.reset();
 });
 
-// Clear a field's error message as soon as it's fixed, without
-// waiting for another submit.
+
 ["name", "email", "message"].forEach((fieldId) => {
   const field = document.querySelector(`#${fieldId}`);
   field.addEventListener("input", () => {
