@@ -1,6 +1,6 @@
 # webtech-lab-01 — Javiera Ignacia Carrasco Bastías
 
-Personal page built with hand-written HTML and CSS, for Lab 1 (Class 1: HTML, CSS and the DOM).
+Personal page built with HTML and CSS, for Lab 1.
 
 **Published site:** https://javinaxxa.github.io/webtech-lab-01/
 
