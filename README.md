@@ -10,3 +10,5 @@ Personal page built with HTML, CSS and JavaScript, for Lab 1  and Lab 2.
 - `styles.css` — the external stylesheet.
 - `app.js` — the script for Lab 2.
 - `chiquitin-milo.jpg` — image used in the "About me" section.
+
+
