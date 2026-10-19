@@ -17,6 +17,7 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#reading-list">Reading list</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#price-list">Price list</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -161,6 +162,38 @@
       </div>
     </section>
 
+    <section id="price-list" aria-labelledby="price-list-title">
+      <h2 id="price-list-title">Wheelhouse price list</h2>
+      <p>
+        The services of the bicycle repair shop I built for this course, read from its JSON API
+        when this page loads.
+      </p>
+
+      <p id="price-list-status" role="status">Loading the price list…</p>
+
+      <table id="price-list-table" hidden>
+        <caption>Services and prices</caption>
+        <thead>
+          <tr>
+            <th scope="col">Service</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody id="price-list-rows"></tbody>
+      </table>
+
+      <h3>Look up one service</h3>
+      <form id="service-lookup-form">
+        <div>
+          <label for="service-id">Service id</label>
+          <input type="number" id="service-id" name="service-id" min="1" required>
+        </div>
+        <button type="submit">Look it up</button>
+      </form>
+
+      <p id="service-lookup-result" role="status"></p>
+    </section>
+
     <section id="contact" aria-labelledby="contact-title">
       <h2 id="contact-title">Contact</h2>
 
@@ -200,6 +233,7 @@
   </footer>
 
   <script src="lab2.js"></script>
+  <script src="price-list.js"></script>
 
 </body>
 </html>
